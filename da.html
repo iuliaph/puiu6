@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motivele pentru care te iubesc 💝</title>
+  <style>
+    /* Setări globale pentru body și html */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden; /* Evită scroll orizontal */
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Fundal fix și flexbox pentru a centra conținutul */
+    body {
+      background: url('images/fundal.gif') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100%; /* Asigură că se întinde pe întreaga înălțime a ferestrei */
+      color: white;
+      overflow-y: auto;  /* Permite scroll vertical */
+    }
+
+    /* Containerele principale sunt centrate și au un fundal semi-transparent */
+    .container {
+      text-align: center;
+      max-width: 800px;
+      width: 90%;
+      padding: 20px;
+      border-radius: 15px;
+      background: rgba(0, 0, 0, 0.7); /* Fundal mai opac pentru a se distinge mai bine */
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      flex-grow: 1; /* Permite containerului să se întindă și să ocupe spațiul disponibil */
+      margin-top: 20px; /* Asigură un spațiu între conținut și marginea paginii */
+    }
+
+    /* Titlu cu un font mai mare */
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ffdde1;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Stiluri pentru cadouri - flexbox pentru aliniere și spațiere uniformă */
+    .gifts-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .gift {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      background: #ff6b81;
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .gift:hover {
+      transform: scale(1.1);
+      background: #ff3b5c;
+    }
+
+    .gift:active {
+      transform: scale(0.95);
+    }
+
+    .gift img {
+      width: 60%;
+      height: auto;
+      filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+    }
+
+    /* Motivele care se afișează după apăsarea cadourilor */
+    .motiv {
+      display: none;
+      margin-top: 10px;
+      font-size: 1.2rem;
+      animation: fadeIn 0.5s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Stiluri pentru butoane */
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ff3b5c;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 8px 16px rgba(255, 255, 255, 0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 12px 24px rgba(255, 255, 255, 0.8);
+    }
+
+    .btn:active {
+      transform: scale(0.9);
+    }
+
+    /* Responsive design pentru dispozitive mici */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem; /* Diminuează fontul titlului pe dispozitive mici */
+      }
+
+      .gifts-container {
+        flex-direction: column; /* Aranjează cadourile pe verticală pe dispozitive mici */
+        align-items: center;
+      }
+
+      .gift {
+        width: 80px;
+        height: 80px; /* Redu dimensiunea cadourilor pe mobil */
+      }
+
+      .btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Motivele pentru care te iubesc 💝</h1>
+
+    <!-- Cadouri -->
+    <div class="gifts-container">
+      <div class="gift" onclick="revealMotiv(0)">
+        <img src="images/gift1.gif" alt="Cadou 1">
+      </div>
+      <div class="gift" onclick="revealMotiv(1)">
+        <img src="images/gift1.gif" alt="Cadou 2">
+      </div>
+      <div class="gift" onclick="revealMotiv(2)">
+        <img src="images/gift1.gif" alt="Cadou 3">
+      </div>
+      <div class="gift" onclick="revealMotiv(3)">
+        <img src="images/gift1.gif" alt="Cadou 4">
+      </div>
+      <div class="gift" onclick="revealMotiv(4)">
+        <img src="images/gift1.gif" alt="Cadou 5">
+      </div>
+    </div>
+
+    <!-- Motive -->
+    <div class="motiv" id="motiv-0">1. Te iubesc fiindcă mă faci să mă simt prețuită cu adevărat și nu lași nicio zi să treacă fără să-mi amintești cât de frumoasă sunt în ochii tăi. ❤️</div>
+    <div class="motiv" id="motiv-1">2. Te iubesc pentru că ții cont de părerile mele, asculți cu adevărat ceea ce spun și îmi arăți mereu, prin gesturi mici și mari, cât de mult îți pasă de mine. ❤️</div>
+    <div class="motiv" id="motiv-2">3. Te iubesc pentru răbdarea infinită pe care o ai cu mine și pentru felul în care rămâi alături de mine chiar și în momentele mele dificile. ❤️</div>
+    <div class="motiv" id="motiv-3">4. Te iubesc pentru și cu sforăitul tău chiar dacă mă face să mă întreb de ce dorm cu drujba în pat. ❤️</div>
+    <div class="motiv" id="motiv-4">5. Te iubesc așa cum ești, cu bune și cu rele, pentru că ești al meu, iar asta înseamnă totul pentru mine. ❤️</div>
+
+    <!-- Buton pentru revenire -->
+    <a href="index.html" class="btn"> Înapoi la pagina principală</a>
+    <a href="toți bătrânii.html" class="btn"> Toți bătrânii...</a>
+  </div>
+
+  <script>
+    // Funcție pentru a afișa motivele
+    function revealMotiv(index) {
+      const motiv = document.getElementById(`motiv-${index}`);
+      if (motiv) {
+        motiv.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>

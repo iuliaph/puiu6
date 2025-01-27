@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpriza Ta de Valentine's Day</title>
+    <style>
+        /* Fundal animat */
+        body {
+            background-image: url('images/fundal.gif'); /* Calea corectă către fundalul GIF */
+            background-size: cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            margin: 0;
+            height: 100vh; /* Folosește întreaga înălțime a paginii, pentru a păstra scroll-ul */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: auto; /* Permite scroll-ul în caz de nevoie */
+            flex-direction: column; /* Asigură că elementele sunt afișate pe verticală */
+        }
+
+        /* Containerul pentru chenar */
+        .container {
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            max-width: 500px;  /* Dimensiune mai mică pentru chenar */
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 400px; /* Adăugăm o înălțime minimă pentru container */
+        }
+
+        /* Poza deasupra butoanelor */
+        .poza-noastra {
+            width: 100%;
+            max-width: 300px; /* Dimensiune mai mică pentru poză */
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .poza-noastra:hover {
+            transform: scale(1.05); /* Efect de zoom când treci cu mouse-ul */
+        }
+
+        /* Titlul */
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #ff6b81; /* Roz mai subtil */
+            animation: fadeIn 2s ease-out;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        }
+
+        /* Efect de fade in pentru titlu */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Butoane */
+        .btn-container {
+            display: flex;
+            justify-content: space-around; /* Distribuie butoanele pe orizontală */
+            gap: 20px;  /* Mai puțin spațiu între butoane */
+            width: 100%;
+            margin-top: 20px;
+            flex-wrap: wrap; /* Permite butoanelor să se aranjeze pe mai multe linii pe dispozitive mici */
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 50px;
+            transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .btn-da {
+            background-color: #ff6b81; /* Roz de Valentine's Day */
+            color: white;
+            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.6); /* Efect de strălucire albă */
+        }
+
+        .btn-nu {
+            background-color: #ffb3b3; /* Roz deschis */
+            color: white;
+            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.6); /* Efect de strălucire albă */
+        }
+
+        /* Efecte de hover pe butoane */
+        .btn:hover {
+            transform: scale(1.1);
+            background-color: #ff1a1a;
+            box-shadow: 0 12px 24px rgba(255, 255, 255, 0.8); /* Efect mai puternic de strălucire albă */
+        }
+
+        .btn:active {
+            transform: scale(0.9);
+        }
+
+        /* Inimioare pe butoane */
+        .btn i {
+            margin-right: 10px;
+            font-size: 22px;
+        }
+
+        /* Stiluri pentru text */
+        p {
+            font-size: 18px;
+            margin-top: 15px;
+            color: #ffebcd;
+            font-style: italic;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        /* Responsive design pentru dispozitive mobile */
+        @media (max-width: 768px) {
+            .poza-noastra {
+                max-width: 80%; /* Pe mobile, poza va ocupa 80% din lățime */
+            }
+            
+            h1 {
+                font-size: 22px;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+
+            .btn-container {
+                flex-direction: column; /* Butoanele vor fi pe verticală pe dispozitive mici */
+                align-items: center;
+            }
+
+            .btn-container button {
+                margin-bottom: 10px; /* Spațiu între butoane */
+            }
+        }
+    </style>
+    <!-- Link pentru fonturi personalizate -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Titlul principal -->
+        <h1>Will you be my Valentine? 💖</h1>
+
+        <!-- Poza deasupra butoanelor -->
+        <img src="images/poza_noastra1.jpg" alt="Poza Noastra" class="poza-noastra">
+        
+
+        <!-- Butoane pentru răspunsuri -->
+        <div class="btn-container">
+            <button class="btn btn-da" onclick="window.location.href='da.html'"><i class="fas fa-heart"></i> Da 💌</button>
+            <button class="btn btn-nu" onclick="window.location.href='nu.html'"><i class="fas fa-heart-broken"></i> Nu 💔</button>
+        </div>
+    </div>
+
+    <!-- Font Awesome pentru iconițe -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>

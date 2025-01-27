@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOSCHETARULE !!!</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Fundalul cu blur */
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url('images/error-404.gif'); /* GIF-ul de eroare 404 */
+      background-size: cover;
+      background-position: center;
+      backdrop-filter: blur(8px); /* Efectul de blur */
+      position: relative;
+      color: #fff;
+      overflow: auto; /* Permite derularea în caz de nevoie */
+    }
+
+    /* Întregul conținut într-un chenar */
+    .content {
+      padding: 30px;
+      border: 5px solid #0000ff; /* Bordură albastră, inspirată din eroarea XP */
+      border-radius: 15px;
+      background-color: rgba(0, 0, 255, 0.5); /* Fundal albastru transparent */
+      text-align: center;
+      width: 80%;
+      max-width: 700px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      margin: 20px; /* Asigură un spațiu în jurul contentului */
+    }
+
+    /* Titlu cu culori de eroare */
+    h1 {
+      font-size: 2.5rem;
+      color: #ff0000;
+      margin-bottom: 20px;
+      padding: 20px;
+      border: 3px solid #ff0000;
+      border-radius: 10px;
+      background-color: #000080;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    /* Mesajul principal */
+    p {
+      font-size: 1.5rem;
+      color: #ffffff;
+      margin: 20px 0;
+    }
+
+    /* Butonul cu temă albastră */
+    .btn {
+      background-color: #0000ff;
+      color: white;
+      font-size: 1.5rem;
+      padding: 15px 30px;
+      border: none;
+      cursor: pointer;
+      margin-top: 30px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-family: 'Courier New', Courier, monospace;
+      transition: background-color 0.3s ease;
+      display: inline-block; /* Important pentru a se centra */
+      text-align: center; /* Centrarea textului */
+    }
+
+    .btn:hover {
+      background-color: #00008b;
+    }
+
+    /* GIF-uri pe laterale */
+    .side-gif {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100px;
+    }
+
+    .left-gif {
+      left: 10px;
+    }
+
+    .right-gif {
+      right: 10px;
+    }
+
+    /* Responsive design pentru dispozitive mici */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.8rem; /* Ajustează dimensiunea titlului pe ecrane mici */
+      }
+
+      p {
+        font-size: 1.2rem; /* Diminuează dimensiunea textului */
+      }
+
+      .btn {
+        font-size: 1.2rem; /* Diminuează fontul butonului */
+        padding: 10px 20px;
+        width: 100%; /* Face butonul să ocupe întreaga lățime pe dispozitive mici */
+      }
+
+      .side-gif {
+        width: 60px; /* Ajustează dimensiunea GIF-urilor laterale pe mobil */
+      }
+
+      .content {
+        width: 90%; /* Face containerul mai mic pe ecrane mici */
+        padding: 15px; /* Reduce padding-ul pentru mobil */
+      }
+    }
+
+    /* Centrarea butonului în mod universal */
+    .content .btn {
+      display: block;
+      margin: 30px auto 0; /* Centrarea butonului pe ecran */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Conținut într-un chenar -->
+  <div class="content">
+    <!-- Titlu în chenar -->
+    <h1>BOSCHETARULE !!!</h1>
+  
+    <!-- Mesaj -->
+    <p>Tu nu scapi de mine asa usor</p>
+  
+    <!-- Buton pentru a reveni la pagina principală -->
+    <a href="index.html" class="btn">Întoarce-te să nu te bat</a>
+  </div>
+</body>
+</html>
